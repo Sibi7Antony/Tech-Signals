@@ -1,0 +1,150 @@
+/* ═══════════════════════════════════════════
+   TECH VOICES — Card Stack Section
+   ═══════════════════════════════════════════ */
+
+.section {
+    padding: 100px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--bg-body, #F4F4F4);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.textSide {
+    flex: 1;
+    max-width: 520px;
+}
+
+.label {
+    font-family: 'cuyabra', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary-orange, #FF4500);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.headline {
+    font-family: 'cuyabra', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-primary, #111);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: var(--primary-orange, #FF4500);
+    text-shadow: 0 0 20px rgba(255, 69, 0, 0.15);
+}
+
+.subtext {
+    font-family: 'cuyabra', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-secondary, #555);
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 440px;
+}
+
+.cardSide {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 340px;
+}
+
+/* ──── Tablet ──── */
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 30px;
+    }
+
+    .inner {
+        flex-direction: column;
+        gap: 60px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .textSide {
+        max-width: 100%;
+    }
+
+    .subtext {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .headline {
+        font-size: 2.5rem;
+    }
+
+    .cardSide {
+        min-height: 300px;
+        width: 100%;
+        max-width: 420px;
+    }
+}
+
+/* ──── Phone ──── */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 20px;
+    }
+
+    .inner {
+        gap: 40px;
+    }
+
+    .headline {
+        font-size: 2rem;
+    }
+
+    .subtext {
+        font-size: 1rem;
+    }
+
+    .label {
+        font-size: 0.75rem;
+    }
+
+    .cardSide {
+        min-height: 280px;
+        max-width: 100%;
+    }
+}
+
+/* ──── Small Phone ──── */
+@media (max-width: 480px) {
+    .section {
+        padding: 48px 16px;
+    }
+
+    .headline {
+        font-size: 1.6rem;
+    }
+
+    .subtext {
+        font-size: 0.9rem;
+    }
+
+    .inner {
+        gap: 32px;
+    }
+
+    .cardSide {
+        min-height: 260px;
+    }
+}

@@ -1,0 +1,173 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    padding: 180px 80px 100px 80px;
+    background-image: url('/Whisk_8dfda174f459e98a6d04d36b6e9e6b23dr.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 32px 32px 0 0;
+    position: relative;
+    min-height: 100vh;
+    color: #fff;
+    width: 100%;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.15) 100%);
+    z-index: 1;
+    border-radius: 32px 32px 0 0;
+}
+
+.hero>* {
+    z-index: 2;
+    position: relative;
+}
+
+/* ──── Reiswar for ALL Hero Text ──── */
+.headline {
+    font-family: 'Reiswar', sans-serif;
+    font-size: 4rem;
+    line-height: 1.05;
+    font-weight: 700;
+    color: #fff;
+    max-width: 900px;
+    margin-bottom: 20px;
+    letter-spacing: 0.04em;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.subtext {
+    font-family: 'Reiswar', sans-serif;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 16px;
+    font-weight: 400;
+    max-width: 550px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.95;
+}
+
+.description {
+    font-family: 'Reiswar', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: 40px;
+    font-weight: 300;
+    max-width: 560px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+    text-transform: none;
+}
+
+.cta {
+    font-family: 'Reiswar', sans-serif;
+    background-color: var(--primary-orange, #FF4500);
+    color: #fff;
+    padding: 18px 44px;
+    border-radius: 48px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.cta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(255, 69, 0, 0.4);
+}
+
+/* ──── Tablet ──── */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 160px 60px 80px 60px;
+    }
+
+    .headline {
+        font-size: 3.2rem;
+        max-width: 700px;
+    }
+
+    .subtext {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        max-width: 480px;
+    }
+}
+
+/* ──── Phone ──── */
+@media (max-width: 768px) {
+    .hero {
+        padding: 140px 24px 60px 24px;
+        min-height: 85vh;
+        border-radius: 0;
+    }
+
+    .hero::before {
+        border-radius: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
+    }
+
+    .headline {
+        font-size: 2.2rem;
+        max-width: 100%;
+    }
+
+    .subtext {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+
+    .description {
+        font-size: 0.82rem;
+        max-width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .cta {
+        padding: 14px 32px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ──── Small Phone ──── */
+@media (max-width: 480px) {
+    .hero {
+        padding: 120px 16px 48px 16px;
+        min-height: 80vh;
+    }
+
+    .headline {
+        font-size: 1.8rem;
+    }
+
+    .subtext {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+    }
+
+    .description {
+        font-size: 0.75rem;
+        line-height: 1.6;
+    }
+
+    .cta {
+        padding: 12px 28px;
+        font-size: 0.8rem;
+    }
+}
